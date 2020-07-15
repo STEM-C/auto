@@ -1,5 +1,5 @@
 # auto
-GitHub actions that enable an automated CI/CD pipeline
+GitHub actions that enable an automated CI/CD pipeline...
 
 ![Test](https://github.com/STEM-C/auto/workflows/Test%20all%20actions/badge.svg) ![Build](https://github.com/STEM-C/auto/workflows/Build%20all%20actions/badge.svg)
 <br/>
