@@ -6,4 +6,19 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-      - name: Is this working
+      - name: checkout repo
+        uses: actions/checkout@v2
+      - name: install dependencies
+        run: yarn
+      - name: build actions
+        run: yarn build
+      - name: commit builds
+        uses: EndBug/add-and-commit@v4
+        with:
+          author_name: nionata
+          author_email: nionata@ufl.edu
+          message: Built latest actions 
+          add: "*"
+          ref: master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
