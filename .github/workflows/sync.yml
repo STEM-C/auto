@@ -3,6 +3,7 @@ on:
   pull_request:
     types: [assigned, synchronize]
   push:
+    branches: ['*']
 jobs:
   run:
     runs-on: ubuntu-latest
