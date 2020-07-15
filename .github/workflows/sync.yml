@@ -1,0 +1,9 @@
+name: Sync
+on: 
+  pull_request:
+    types: [ synchronize ]
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
