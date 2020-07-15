@@ -1,6 +1,6 @@
 {
   "name": "auto",
-  "description": "Actions for CI/CD pipeline",
+  "description": "Actions for CI/CD pipeline C",
   "author": "Nicholas Ionata",
   "license": "MIT",
   "dependencies": {
