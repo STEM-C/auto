@@ -1,0 +1,19 @@
+name: 'Build-Test-Deploy'
+description: 'Build, test, and deploy a target image to heroku'
+inputs:
+  image_tag: 
+    description: 'Tag of the github package repo image'
+    required: true
+  app_name:
+    description: 'Target Heroku app name'
+    required: true
+  github_token:
+    description: 'Token for github package repo'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.image_tag }}
+    - ${{ inputs.app_name }}
+    - ${{ inputs.github_token }}
