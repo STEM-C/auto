@@ -8,12 +8,12 @@ then
     exit 0
 fi;
 
-image_tag=$1
-app_name=$2
+#image_tag=$1
+#app_name=$2
 github_token=$3
 
 gpr_base="docker.pkg.github.com/stem-c/casmm"
-heroku_base="registry.heroku.com/$app_name"
+#heroku_base="registry.heroku.com/$app_name"
 
 # Test
  docker-compose up -d
