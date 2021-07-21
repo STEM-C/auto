@@ -33,15 +33,15 @@ docker pull "$gpr_compile" || true
 docker build -t "$gpr_compile:$image_tag" -t "$gpr_compile:latest" -t "$heroku_compile" --cache-from "$gpr_compile" -f ./compile/Dockerfile ./compile
 
 # Test
-# docker-compose up -d
-# ready=false
-# do
-#     ready=docker-compose logs | grep "strapi ready"
-# while ("$ready" = false)
-# cd test 
-# yarn functional
-# yarn integration
-# yarn performance
+ docker-compose up -d
+ ready=false
+ do
+     ready=docker-compose logs | grep "strapi ready"
+ while ("$ready" = false)
+ cd test 
+ yarn functional
+ yarn integration
+ yarn performance
 
 # Push gpr images
 docker push "$gpr_server"
