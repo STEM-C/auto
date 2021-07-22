@@ -33,7 +33,7 @@ docker pull "$gpr_compile" || true
 docker build -t "$gpr_compile:$image_tag" -t "$gpr_compile:latest" -t "$heroku_compile" --cache-from "$gpr_compile" -f ./compile/Dockerfile ./compile
 
 # Test
-docker-compose -f ./docker-compose.test.yml up -d
+docker-compose -f docker-compose.test.yml up -d
 # docker-compose up -d
  ready=false
  do
